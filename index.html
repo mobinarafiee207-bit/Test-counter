@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Counter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="counter">
+        <h1 class="counter_title"> Test Counter </h1>
+
+        <!-- نمایش تعداد درست و غلط -->
+        <div class="counter_stats">
+            <span class="stat stat-correct">✅ True: <span id="correctDisplay">۰</span></span>
+            <span class="stat stat-wrong">❌ False :<span id="wrongDisplay">۰</span></span>
+        </div>
+
+        <!-- دو شمارنده کنار هم -->
+        <div class="counter_double">
+            <!-- شمارنده درست -->
+            <div class="counter_box counter_box--correct">
+                <h2 class="counter_box-title">True ✅</h2>
+                <span class="counter_value" id="correctValue">۰</span>
+                <div class="counter_buttons">
+                    <button class="counter_button counter_button--decrease" id="correctDecrease">
+                        <i class="fas fa-minus counter_icon"></i>
+                    </button>
+                    <button class="counter_button counter_button--increase" id="correctIncrease">
+                        <i class="fas fa-plus counter_icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- شمارنده غلط -->
+            <div class="counter_box counter_box--wrong">
+                <h2 class="counter_box-title">False❌</h2>
+                <span class="counter_value" id="wrongValue">۰</span>
+                <div class="counter_buttons">
+                    <button class="counter_button counter_button--decrease" id="wrongDecrease">
+                        <i class="fas fa-minus counter_icon"></i>
+                    </button>
+                    <button class="counter_button counter_button--increase" id="wrongIncrease">
+                        <i class="fas fa-plus counter_icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="counter_total">
+            total:<span id="totalDisplay">
+            </span>
+        </div>
+
+        <!-- دکمه ریست کامل -->
+        <button class="counter_reset-button" id="resetAll">
+            <i class="fas fa-sync-alt counter_reset-icon"></i>Reset All
+        </button>
+        <button class="counter_save-button" id="saveResult">
+            <i class="fas fa-save"></i> Save Result
+        </button>
+        <!-- نمایش درصد -->
+        <div class="counter_percent">
+            Percentage: <span id="percentDisplay">0</span>%
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

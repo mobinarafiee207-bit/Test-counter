@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background-image: radial-gradient(ellipse, #500053, #240029);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.counter {
+    background-color: #cc97f0;
+    width: 700px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 25px 121px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px 20px;
+}
+
+.counter_title {
+    opacity: 0.8;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1e0725;
+}
+
+/* آمار */
+.counter_stats {
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+.stat-correct {
+    color: #0d2402;
+}
+
+.stat-wrong {
+    color: #a80000;
+}
+
+/* دو شمارنده کنار هم */
+.counter_double {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.counter_box {
+    background: rgba(230, 228, 228, 0.2);
+    border-radius: 16px;
+    padding: 20px 25px 15px;
+    min-width: 200px;
+    flex: 1;
+    text-align: center;
+}
+
+.counter_box--correct {
+    border: 3px solid #2b2a2a;
+}
+
+.counter_box--wrong {
+    border: 3px solid #2b2a2a;
+}
+
+.counter_box-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1c0725;
+    margin-bottom: 5px;
+}
+
+.counter_value {
+    font-size: 100px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.2;
+    transition: transform 0.15s ease;
+}
+
+.counter_box--correct .counter_value {
+    color: #1c0725;
+}
+
+.counter_box--wrong .counter_value {
+    color: #1c0725;
+}
+
+.counter_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.counter_button {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 20px;
+}
+
+.counter_button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.counter_icon {
+    color: #1e0725;
+    font-size: 24px;
+}
+
+/* درصد */
+.counter_percent {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 8px 30px;
+    border-radius: 30px;
+}
+
+/* دکمه ریست */
+.counter_reset-button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.counter_reset-button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+}
+
+.counter_reset-icon {
+    font-size: 20px;
+}
+
+@media (max-width: 680px) {
+    .counter {
+        padding: 20px 15px;
+    }
+
+    .counter_double {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .counter_value {
+        font-size: 70px;
+    }
+
+    .counter_stats {
+        font-size: 16px;
+        gap: 20px;
+        padding: 8px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .counter_title {
+        font-size: 22px;
+    }
+
+    .counter_percent {
+        font-size: 20px;
+        padding: 6px 20px;
+    }
+}
+
+.counter_total {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 8px 30px;
+    border-radius: 30px;
+    color: #200725;
+}
+
+/* دکمه ذخیره نتیجه */
+.counter_save-button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1d2507;
+    border: none;
+}
+
+.counter_save-button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+}
+
+/* درصد */
+.counter_percent {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 8px 30px;
+    border-radius: 30px;
+    color: #240725;
+}
+
+@media (max-width: 680px) {
+    .counter {
+        padding: 20px 15px;
+    }
+
+    .counter_double {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .counter_box {
+        flex: 0 1 calc(50% - 10px);
+        min-width: 140px;
+    }
+
+    .counter_value {
+        font-size: 70px;
+    }
+
+    .counter_stats {
+        font-size: 16px;
+        gap: 20px;
+        padding: 8px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .counter_title {
+        font-size: 22px;
+    }
+}
